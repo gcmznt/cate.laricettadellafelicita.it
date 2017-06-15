@@ -21,6 +21,7 @@ app.set('view engine', 'pug')
 app.get('/', homepage)
 app.get('/new/:ep/', newEndpoint)
 app.get('/nata/', nascita)
+app.get('/nata/:data/', nascita)
 app.get('/kg/:kg/', peso)
 app.get('/cm/:cm/', lunghezza)
 app.get('/send/', inviaNotifiche)
@@ -57,8 +58,12 @@ function newEndpoint (req, res) {
 
 function nascita (req, res) {
   nata = true
-  let now = new Date()
-  data = `${now.getDate()}/${now.getMonth() + 1}/${now.getFullYear()}`
+  if (!data || req.params.data) {
+    let now = new Date()
+    data = (req.params.data)
+      ? `${now.getDate()}/${now.getMonth() + 1}/${now.getFullYear()}`
+      : req.params.data
+  }
   res.redirect('/')
 }
 
