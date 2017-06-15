@@ -1,0 +1,98 @@
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Lobster', cursive;
+}
+
+.no .wrap {
+  background-color: hsl(283, 39%, 53%);
+  background-image: linear-gradient(
+    to bottom,
+    hsl(283, 39%, 53%),
+    hsl(283, 39%, 33%)
+  );
+}
+
+.yes .wrap {
+  background-color: hsl(48, 89%, 50%);
+  background-image: linear-gradient(
+    to bottom,
+    hsl(48, 89%, 50%),
+    hsl(37, 90%, 51%)
+  );
+}
+
+.wrap {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  font-size: 40px;
+  padding: 20px;
+}
+
+.answer {
+  padding: 20px;
+  font-size: 60px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cm,
+.kg {
+  display: inline-flex;
+  flex-direction: column;
+  font-size: 50%;
+  margin: 0 20px;
+}
+
+.cm svg,
+.kg svg {
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+.footer {
+  font-size: 20px;
+  padding: 20px;
+}
+
+.liste {
+  background: white;
+  color: hsl(283, 39%, 33%);
+  font-size: 18px;
+  padding: 5px 0;
+  text-shadow: none;
+  width: 100%;
+}
+
+.button {
+  margin: 10px;
+  font-size: 140%;
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 8px 16px;
+  display: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#subscribed {
+  margin: 10px;
+  font-size: 140%;
+  padding: 8px 16px;
+  display: none;
+}
