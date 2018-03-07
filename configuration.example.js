@@ -1,3 +1,0 @@
-exports = {
-  googleapiKey: 'YOURKEY'
-}
